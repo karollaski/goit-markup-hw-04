@@ -6,6 +6,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text-color);
+  width: 1600px;
 }
 a {
   text-decoration: none;
@@ -28,6 +29,7 @@ figure {
   --top-logo-color: #000000;
   --team-background-color: #f5f4fa;
   --dark-background-color: #2f303a;
+  --light-grey-color: #afb1b8;
 }
 .container {
   width: 1200px;
@@ -72,7 +74,7 @@ figure {
   justify-content: space-between;
   padding: 0;
   margin-block: 32px;
-  margin-right: 371px;
+  margin-right: 345px;
   gap: 46px;
 }
 .menu-link {
@@ -102,14 +104,33 @@ figure {
 .contact-header-link {
   color: var(--second-text-color);
 }
+.contact-header-items:hover .contact-icons,
+.contact-header-items:focus .contact-icons,
+.contact-header-items:active .contact-icons,
 .contact-header-link:hover,
 .contact-header-link:active,
+.contact-header-link:focus,
 .contact-foot-link:hover,
-.contact-foot-link:active {
+.contact-foot-link:active,
+.contact-foot-link:focus {
   color: var(--brand-color);
+  --color2: var(--brand-color);
+  --color4: var(--brand-color);
+}
+
+.contact-icons {
+  --color2: var(--second-text-color);
+  --color4: var(--second-text-color);
+  margin-right: 10px;
 }
 .heading {
-  background-color: var(--dark-background-color);
+  background: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/heading-background.jpg);
+  background-size: contain;
 }
 .heading-wrapper {
   padding-top: 200px;
@@ -164,6 +185,7 @@ figure {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 .lorem-items-heading {
   font-size: 14px;
@@ -178,8 +200,19 @@ figure {
   line-height: 1.71em;
   letter-spacing: 0.03em;
 }
+.lorem-items-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--team-background-color);
+  padding: 25px 100px 25px 100px;
+  margin-bottom: 30px;
+  --color1: var(--main-text-color);
+  --color2: var(--brand-color);
+}
 .wedo-heading,
-.team-heading {
+.team-heading,
+.customers-heading {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -227,10 +260,11 @@ figure {
 }
 .team-list-items {
   background-color: var(--contrast-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .team-description {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 18px;
 }
 .team-list-name {
   font-weight: 500;
@@ -246,6 +280,62 @@ figure {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.team-social-wrapper {
+  padding-inline: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.team-social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.team-social-items {
+  list-style: none;
+}
+.team-social-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  --color4: var(--light-grey-color);
+  border-radius: 50%;
+}
+.team-social-background:hover {
+  cursor: pointer;
+  background-color: var(--brand-color);
+  --color3: var(--contrast-color);
+  --color4: var(--contrast-color);
+}
+.customers-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customers-heading {
+  margin-bottom: 50px;
+}
+.customers-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customers-list-items {
+  --color2: var(--light-grey-color);
+  --color3: var(--light-grey-color);
+  border: solid 1px var(--light-grey-color);
+}
+.customers-list-items:hover {
+  cursor: pointer;
+  --color2: var(--brand-color);
+  --color3: var(--brand-color);
+  border: solid 1px var(--brand-color);
 }
 .foot {
   background-color: var(--dark-background-color);
@@ -314,6 +404,7 @@ figure {
 .filtr-button:active {
   color: var(--contrast-color);
   background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .projects-list {
   list-style-type: none;
@@ -325,6 +416,11 @@ figure {
 .projects-list-items {
   flex-basis: calc((100%- (2 * 30px) / 3));
   border-bottom: 1px solid #ececec;
+}
+.projects-list-items:hover,
+.projects-list-items:focus {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .project-description {
   margin-block: 20px;
