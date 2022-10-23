@@ -293,10 +293,9 @@ figure {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-}
-.team-social-items {
   list-style: none;
 }
+
 .team-social-background {
   display: flex;
   justify-content: center;
@@ -306,7 +305,10 @@ figure {
   --color4: var(--light-grey-color);
   border-radius: 50%;
 }
-.team-social-background:hover {
+.team-social-background:hover,
+.team-social-background:focus,
+.foot-social-background:hover,
+.foot-social-background:focus {
   cursor: pointer;
   background-color: var(--brand-color);
   --color3: var(--contrast-color);
@@ -345,6 +347,12 @@ figure {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.foot-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 70px;
+}
+
 .contact-wrapper {
   font-style: inherit;
 }
@@ -362,6 +370,34 @@ figure {
 }
 .contact-foot-link {
   color: rgba(255, 255, 255, 0.6);
+}
+.foot-social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.foot-social-description {
+  color: var(--contrast-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.14;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.foot-social-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  --color3: var(--contrast-color);
+  --color4: var(--contrast-color);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 .subpages {
   display: flex;
